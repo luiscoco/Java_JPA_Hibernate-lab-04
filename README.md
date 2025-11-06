@@ -8,7 +8,11 @@ mvn -q -DskipTests compile
 
 ## TABLE_PER_CLASS checks
 
-After running mvn -q exec:java@TABLE_PER_CLASS:
+After running
+
+```
+mvn -q exec:java@TABLE_PER_CLASS
+```
 
 mysql -uroot -proot -D DB_LAB_04_TABLE_PER_CLASS -e "SHOW TABLES;"
 
@@ -30,7 +34,11 @@ Executive has id=3, name, salary=2000.0, bonus=30.0
 
 ## TABLE_PER_HIERARCHY checks
 
-After running mvn -q exec:java@TABLE_PER_HIERARCHY:
+After running 
+
+```
+mvn -q exec:java@TABLE_PER_HIERARCHY
+```
 
 mysql -uroot -proot -D DB_LAB_04_TABLE_PER_HIERARCHY -e "SHOW TABLES; DESCRIBE Person; SELECT id,name,DTYPE,salary,discount,bonus FROM Person ORDER BY id;"
 
@@ -42,7 +50,11 @@ Single table Person with DTYPE values: CUSTOMER(1), EMPLOYEE(2), EXECUTIVE(3) an
 
 ## TABLE_PER_SUBCLASS checks
 
-After running mvn -q exec:java@TABLE_PER_SUBCLASS:
+After running:
+
+```
+mvn -q exec:java@TABLE_PER_SUBCLASS:
+```
 
 mysql -uroot -proot -D DB_LAB_04_TABLE_PER_SUBCLASS -e "SHOW TABLES;"
 
