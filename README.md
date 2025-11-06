@@ -1,5 +1,11 @@
 # Java_JPA_Hibernate-lab-04
 
+We compile the application with this command:
+
+```
+mvn -q -DskipTests compile
+```
+
 ## TABLE_PER_CLASS checks
 
 After running mvn -q exec:java@TABLE_PER_CLASS:
@@ -32,6 +38,8 @@ mysql -uroot -proot -D DB_LAB_04_TABLE_PER_HIERARCHY -e "SHOW TABLES; DESCRIBE P
 
 Single table Person with DTYPE values: CUSTOMER(1), EMPLOYEE(2), EXECUTIVE(3) and the respective columns populated.
 
+<img width="1200" height="519" alt="image" src="https://github.com/user-attachments/assets/8ecf9204-7a61-4932-9616-1eba288af3f7" />
+
 ## TABLE_PER_SUBCLASS checks
 
 After running mvn -q exec:java@TABLE_PER_SUBCLASS:
@@ -44,10 +52,16 @@ mysql -uroot -proot -D DB_LAB_04_TABLE_PER_SUBCLASS -e "SELECT * FROM Person ORD
 
 Person has 3 rows (ids 1,2,3; names).
 
+<img width="924" height="570" alt="image" src="https://github.com/user-attachments/assets/9d5096e8-a34e-464f-9673-5d271eaf17d1" />
+
 Employee has rows for id=2 and id=3 (exec inherits employee).
+
+<img width="931" height="571" alt="image" src="https://github.com/user-attachments/assets/39c0fe0a-f2de-4ed2-961b-dfaf87f1f1b3" />
 
 Executive has row id=3 (bonus).
 
-
+<img width="1017" height="567" alt="image" src="https://github.com/user-attachments/assets/7b30bbd2-67fa-4008-9b7b-6df862b2deef" />
 
 Customer has row id=1 (discount).
+
+<img width="928" height="571" alt="image" src="https://github.com/user-attachments/assets/db92ccfb-dc30-47d3-b0c2-84f916428e2b" />
